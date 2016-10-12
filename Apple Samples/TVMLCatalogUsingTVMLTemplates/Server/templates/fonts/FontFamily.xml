@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <head>
+        <style>
+            .font {
+                tv-text-style: none;
+                font-size: 48;
+            }
+        </style>
+    </head>
+    <descriptiveAlertTemplate>
+        <infoTable>
+            <info style="text-align: center; tv-line-spacing: 10;">
+                <text class="font" style="font-family: 'Apple SD Gothic Neo';">Apple SD Gothic Neo</text>
+                <text class="font" style="font-family: 'Arial';">Arial</text>
+                <text class="font" style="font-family: 'Copperplate';">Copperplate</text>
+                <text class="font" style="font-family: 'Courier';">Courier</text>
+                <text class="font" style="font-family: 'Helvetica';">Helvetica</text>
+                <text class="font" style="font-family: 'Helvetica Neue';">Helvetica Neue</text>
+                <text class="font" style="font-family: 'Menlo';">Menlo</text>
+                <text class="font" style="font-family: 'Times New Roman';">Times New Roman</text>
+                <text class="font" style="font-family: 'TimesNewRomanPS-BoldMT';">Times New Roman Bold</text>
+                <text class="font" style="font-family: 'Trebuchet MS';">Trebuchet MS</text>
+            </info>
+        </infoTable>
+    </descriptiveAlertTemplate>
+</document>

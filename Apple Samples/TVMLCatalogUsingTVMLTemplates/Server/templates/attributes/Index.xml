@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
+See LICENSE.txt for this sample’s licensing information
+-->
+<document>
+  <head>
+    <style>
+      .descriptionLayout {
+        tv-text-max-lines: 8;
+      }
+    </style>
+  </head>
+  <listTemplate>
+    <list>
+      <header>
+        <title>Attributes</title>
+      </header>
+      <section>
+        <listItemLockup documentURL="/templates/attributes/ItemID.xml">
+          <title>itemID</title>
+          <relatedContent>
+            <lockup>
+              <img src="/resources/images/screenshots/itemID.jpg" width="857" height="482" />
+              <description class="descriptionLayout">Demonstrate how to use itemID for cell reordering animations.</description>
+            </lockup>
+          </relatedContent>
+        </listItemLockup>
+      </section>
+    </list>
+  </listTemplate>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright (C) 2016 Apple Inc. All Rights Reserved.
+See LICENSE.txt for this sample’s licensing information
+-->
+<document>
+  <head>
+    <style>
+    .showTextOnHighlight {
+      tv-text-highlight-style: show-on-highlight;
+    }
+    .6ColumnGrid {
+      tv-interitem-spacing: 48;
+    }
+    </style>
+  </head>
+  <stackTemplate>
+    <banner>
+      <title style="tv-text-style: title3">Press Shuffle to randomize lockup order in shelf</title>
+    </banner>
+    <collectionList>
+      <separator style="margin: 40 0 20">
+        <button onselect="
+setTimeout(function() {
+    const document = getActiveDocument();
+    const sections = document.getElementsByTagName('section');
+    const shuffleLockupsInSection = function(section) {
+        let lockups = [], randomIndex;
+        while (section.firstChild) {
+            lockups.push(section.firstChild);
+            section.removeChild(section.firstChild);
+        }
+        while (lockups.length) {
+            randomIndex = Math.floor(Math.random() * lockups.length);
+            section.appendChild(lockups[randomIndex]);
+            lockups.splice(randomIndex, 1);
+        }
+    };
+    let i = sections.length;
+    while (i--) { shuffleLockupsInSection(sections.item(i)); }
+});
+">
+          <text>Shuffle</text>
+        </button>
+      </separator>
+      <shelf class="6ColumnGrid">
+        <section>
+          <lockup itemID="1">
+            <img src="/resources/images/lockups/movie_1.lcr" width="250" height="375" />
+            <title class="showTextOnHighlight">Title 1</title>
+          </lockup>
+          <lockup itemID="2">
+            <img src="/resources/images/lockups/movie_2.lcr" width="250" height="375" />
+            <title class="showTextOnHighlight">Title 2</title>
+          </lockup>
+          <lockup itemID="3">
+            <img src="/resources/images/lockups/movie_3.lcr" width="250" height="375" />
+            <title class="showTextOnHighlight">Title 3</title>
+          </lockup>
+          <lockup itemID="4">
+            <img src="/resources/images/lockups/movie_4.lcr" width="250" height="375" />
+            <title class="showTextOnHighlight">Title 4</title>
+          </lockup>
+          <lockup itemID="5">
+            <img src="/resources/images/lockups/movie_5.lcr" width="250" height="375" />
+            <title class="showTextOnHighlight">Title 5</title>
+          </lockup>
+          <lockup itemID="6">
+            <img src="/resources/images/lockups/movie_6.lcr" width="250" height="375" />
+            <title class="showTextOnHighlight">Title 6</title>
+          </lockup>
+          <lockup itemID="7">
+            <img src="/resources/images/lockups/movie_7.lcr" width="250" height="375" />
+            <title class="showTextOnHighlight">Title 7</title>
+          </lockup>
+        </section>
+      </shelf>
+    </collectionList>
+  </stackTemplate>
+</document>

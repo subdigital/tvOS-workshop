@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <descriptiveAlertTemplate>
+        <infoTable>
+            <info style="text-align: center; tv-line-spacing: 10;">
+                <text style="tv-text-style: body;">body</text>
+                <text style="tv-text-style: callout;">callout</text>
+                <text style="tv-text-style: caption1;">caption1</text>
+                <text style="tv-text-style: caption2;">caption2</text>
+                <text style="tv-text-style: footnote;">footnote</text>
+                <text style="tv-text-style: headline;">headline</text>
+                <text style="tv-text-style: subhead;">subhead</text>
+                <text style="tv-text-style: subtitle1;">subtitle1</text>
+                <text style="tv-text-style: subtitle2;">subtitle2</text>
+                <text style="tv-text-style: subtitle3;">subtitle3</text>
+                <text style="tv-text-style: title1;">title1</text>
+                <text style="tv-text-style: title2;">title2</text>
+                <text style="tv-text-style: title3;">title3</text>
+            </info>
+        </infoTable>
+    </descriptiveAlertTemplate>
+</document>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Snr-Jn-2yz">
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Siri Remote-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TVInput" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tv-remote" translatesAutoresizingMaskIntoConstraints="NO" id="QLN-bc-MD1" customClass="FocusableImageView" customModule="TVInput" customModuleProvider="target">
+                                <frame key="frameInset" minX="840" minY="476" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Siri Remote" id="E29-0m-DBx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2201" y="136"/>
+        </scene>
+        <!--Controllers-->
+        <scene sceneID="4a4-zy-YcU">
+            <objects>
+                <viewController id="X4s-8g-gAg" customClass="GameControllersViewController" customModule="TVInput" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AGU-ig-PYO"/>
+                        <viewControllerLayoutGuide type="bottom" id="vhk-q8-YLL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BA6-Br-zUU">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB2-Ht-SPW">
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Discover Controllers"/>
+                                <connections>
+                                    <action selector="discoverTapped:" destination="X4s-8g-gAg" eventType="touchUpInside" id="Nsg-yc-WC6"/>
+                                    <action selector="discoverTapped:" destination="X4s-8g-gAg" eventType="primaryActionTriggered" id="V0x-tK-krR"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vHb-iK-ax4"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="3HP-Og-gDe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="oyK-ke-bqs"/>
+                                    <constraint firstAttribute="width" priority="250" constant="1000" id="z6i-Th-1yK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="DB2-Ht-SPW" firstAttribute="leading" secondItem="BA6-Br-zUU" secondAttribute="leadingMargin" constant="40" id="5C8-qo-Hag"/>
+                            <constraint firstItem="3HP-Og-gDe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BA6-Br-zUU" secondAttribute="leadingMargin" constant="100" id="KqI-6c-se1"/>
+                            <constraint firstItem="3HP-Og-gDe" firstAttribute="centerX" secondItem="BA6-Br-zUU" secondAttribute="centerX" id="ZU1-nP-dHe"/>
+                            <constraint firstItem="3HP-Og-gDe" firstAttribute="centerY" secondItem="BA6-Br-zUU" secondAttribute="centerY" id="bSD-o0-DdJ"/>
+                            <constraint firstItem="vhk-q8-YLL" firstAttribute="top" secondItem="DB2-Ht-SPW" secondAttribute="bottom" constant="80" id="eet-AS-prp"/>
+                            <constraint firstItem="DB2-Ht-SPW" firstAttribute="top" secondItem="vHb-iK-ax4" secondAttribute="bottom" constant="8" id="f9B-q2-h5Y"/>
+                            <constraint firstItem="vHb-iK-ax4" firstAttribute="centerX" secondItem="DB2-Ht-SPW" secondAttribute="centerX" id="gFW-2h-k1N"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3HP-Og-gDe" secondAttribute="trailing" constant="100" id="m8S-js-vi2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Controllers" id="Mlj-Jw-YNx"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="vHb-iK-ax4" id="H1I-LC-815"/>
+                        <outlet property="controllersStackView" destination="3HP-Og-gDe" id="tEx-uz-zEc"/>
+                        <outlet property="discoverButton" destination="DB2-Ht-SPW" id="iOW-VM-goq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FV-G7-OgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2201" y="2080"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xFh-bz-HVt">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Snr-Jn-2yz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="6kj-oo-FNm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cfv-9S-NQe"/>
+                        <segue destination="X4s-8g-gAg" kind="relationship" relationship="viewControllers" id="uOf-F7-F5j"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2H9-0j-s7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tv-remote" width="320" height="1028"/>
+    </resources>
+</document>

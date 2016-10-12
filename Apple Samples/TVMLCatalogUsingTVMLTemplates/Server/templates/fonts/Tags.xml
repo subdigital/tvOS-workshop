@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <head>
+        <style>
+            .font {
+                tv-text-style: title3;
+            }
+        </style>
+    </head>
+    <descriptiveAlertTemplate>
+        <infoTable>
+            <info style="text-align: center; tv-line-spacing: 10;">
+                <text class="font">This is <b>Bold</b> text</text>
+                <text class="font">This is <i>Italic</i> text</text>
+                <text class="font">This is <strike>Strike</strike> text</text>
+            </info>
+        </infoTable>
+    </descriptiveAlertTemplate>
+</document>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <head>
+        <style>
+            .font {
+                tv-text-style: title3;
+            }
+        </style>
+    </head>
+    <descriptiveAlertTemplate>
+        <infoTable>
+            <info style="text-align: center; tv-line-spacing: 10;">
+                <text class="font" style="font-weight: ultralight;">ultralight</text>
+                <text class="font" style="font-weight: thin;">thin</text>
+                <text class="font" style="font-weight: light;">light</text>
+                <text class="font" style="font-weight: regular;">regular</text>
+                <text class="font" style="font-weight: medium;">medium</text>
+                <text class="font" style="font-weight: semibold;">semibold</text>
+                <text class="font" style="font-weight: bold;">bold</text>
+                <text class="font" style="font-weight: heavy;">heavy</text>
+                <text class="font" style="font-weight: black;">black</text>
+            </info>
+        </infoTable>
+    </descriptiveAlertTemplate>
+</document>

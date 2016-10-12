@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="heN-JO-RFI">
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="AMn-9z-Stp">
+            <objects>
+                <navigationController id="heN-JO-RFI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wdq-em-Y7J">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="n82-fR-cBV" kind="relationship" relationship="rootViewController" id="pwJ-Dl-aez"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PwE-Nh-v1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2148" y="-71"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2fi-MF-3Wa">
+            <objects>
+                <viewController id="n82-fR-cBV" customClass="ViewController" customModule="HelloTables" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X9c-o2-Rz5"/>
+                        <viewControllerLayoutGuide type="bottom" id="ao5-cV-yF5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FED-Q0-WSE">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-HE-cnd">
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-uf-1Yw">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1000" id="TOf-Ic-cfs"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="n82-fR-cBV" id="fAp-0m-IfA"/>
+                                            <outlet property="delegate" destination="n82-fR-cBV" id="xy8-bA-KNA"/>
+                                        </connections>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5R-qE-T1l" customClass="ButtonContainerView" customModule="HelloTables" customModuleProvider="target">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrO-8s-e5B">
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.5" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="mrO-8s-e5B" firstAttribute="centerY" secondItem="t5R-qE-T1l" secondAttribute="centerY" id="Q6B-1V-c9Z"/>
+                                            <constraint firstItem="mrO-8s-e5B" firstAttribute="centerX" secondItem="t5R-qE-T1l" secondAttribute="centerX" id="e2J-Lz-aiZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="button" destination="mrO-8s-e5B" id="7go-RE-0kM"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6TN-HE-cnd" firstAttribute="leading" secondItem="FED-Q0-WSE" secondAttribute="leadingMargin" constant="50" id="4PN-Yt-bMc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6TN-HE-cnd" secondAttribute="trailing" constant="50" id="6CW-lw-nU3"/>
+                            <constraint firstItem="ao5-cV-yF5" firstAttribute="top" secondItem="6TN-HE-cnd" secondAttribute="bottom" constant="50" id="K5K-oK-wMh"/>
+                            <constraint firstItem="6TN-HE-cnd" firstAttribute="top" secondItem="X9c-o2-Rz5" secondAttribute="bottom" constant="50" id="van-Ws-aop"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YqN-5z-eYn"/>
+                    <connections>
+                        <outlet property="buttonContainer" destination="t5R-qE-T1l" id="hYx-eJ-iy6"/>
+                        <outlet property="tableView" destination="BhD-uf-1Yw" id="HTS-DN-Puo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gz7-5m-H0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="-71"/>
+        </scene>
+    </scenes>
+</document>
